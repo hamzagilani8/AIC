@@ -29,23 +29,18 @@ urdu_per = (float(urdu_obt)/float(urdu_max))*100
 
 # ***************** Grading function *******************
 def grading(sub_per):
-    if sub_per >= 80:
+    if sub_per >= 90:
+        return 'A*'
+    elif sub_per >= 80:
         return 'A'
-    elif sub_per >= 70 and sub_per <= 79.99:
+    elif sub_per >= 70:
         return 'B'
-    elif sub_per >= 60 and sub_per <= 69.99:
+    elif sub_per >= 60:
         return 'C'
-    elif sub_per >= 33 and sub_per <= 59.99:
+    elif sub_per >= 33:
         return 'D'
     else:
         return 'FAIL'
-
-# ************ Grading *******************************
-phy_grade = grading(phy_per)
-chem_grade = grading(chem_per)
-bio_grade = grading(bio_per)
-isl_grade = grading(isl_per)
-urdu_grade = grading(urdu_per)
 
 # ************ Totals ********************************
 total_marks = (int(phy_max)) +(int(chem_max)) +(int(bio_max)) +(int(isl_max)) +(int(urdu_max))
@@ -70,12 +65,11 @@ print(' ')
 print('Total Marks    ' + '| ' + str(total_marks))
 print('Obtained Marks ' + '| ' + str(obt_marks))
 print('Overall Grade  ' + '| ' + grading(total_per))
-print(' ')
 print('_____________________________________________________')
 print(' ')
 
 if grading(phy_per) == 'FAIL' or grading(chem_per) == 'FAIL' or grading(bio_per) == 'FAIL' or grading(isl_per) == 'FAIL' or grading(urdu_per) == 'FAIL':
-    print('You are fail in any subject(S), please make a reattempt and PASS to get promoted')
+    print('NOTE: You are fail in any subject(S), please make a reattempt and PASS to get promoted')
 else:
     print('CONGRATULATIONS YOU ARE PROMOTED TO NEXT CLASS')
 
