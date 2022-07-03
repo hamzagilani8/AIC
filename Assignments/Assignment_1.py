@@ -2,6 +2,7 @@
 
 print('*****Even odd detector******')
 
+
 # Get Input
 num = int(input ('Enter a Numer: '))
 # Main
