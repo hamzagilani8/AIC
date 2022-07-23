@@ -20,7 +20,7 @@
 ### Finding out the minimun value in the main list
 ##
 ## Assignment 7
-### Getting the mean and median of the numbers greater than 40
+### Getting the mean of the numbers greater than 40
 ##
 ## Assignment 8
 ### Get 2 lists with some similar numbers and find the common elements

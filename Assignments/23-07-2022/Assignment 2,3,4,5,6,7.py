@@ -3,7 +3,7 @@ import random
 # Disclaimer
 print('**************Hello and welcome to this Program****************')
 print('This program would take 2 limits and create a list of random numbers with length of your choice')
-print('It then takes out list of numbers grater than "40" and gives you its mean and median')
+print('It then takes out list of numbers grater than "40" and gives you its mean')
 print(' ')
 
 # Taking Inputs
@@ -36,18 +36,6 @@ for x in range(100):
     if min_num > rand_numbers_list[x]:
         min_num = rand_numbers_list[x]
 
-# Calculating Median
-if_odd = len(greater_than_40) % 2
-if if_odd == 0:
-    a = int((len(greater_than_40)/2))
-    med = greater_than_40[a]
-else:
-     a = int((len(greater_than_40)/2)-1)
-     b = a+1
-     med1 = greater_than_40[a]
-     med2 = greater_than_40[b]
-     med = (med1+med2)/2
-
 # Printing results
 print('***********')
 print(f'Random numbers are: {rand_numbers_list}')
@@ -59,4 +47,4 @@ print(f'Numbers greater than 40 are: {greater_than_40}')
 print('***********')
 print(f'{len(greater_than_40)} numbers in the list are greater than 40 and have a sum of = {sum}')
 print(f'Mean of these 40 numbers is: {sum/len(greater_than_40)}')
-print(f'Median of these 40 numbers is: {med}')
+
