@@ -11,16 +11,17 @@ print(' ')
 if consent == '1':
     rand_num = random.randint(1,10)
     answers = []
-    guess_num = int(input('Guess the number: '))
-    answers.append(guess_num)
 
-    if guess_num == rand_num:
-        print('**** You won *****')
-    else:
-        for i in range(2):
+    for i in range(3):
+        guess_num = int(input('Guess the number: '))
+        answers.append(guess_num)
+        if guess_num == rand_num:
+            print('**** You won *****')
+            break
+        else:
             print('!!! Wrong Answer !!!')
-            guess_num = int(input('Guess the number again: '))
-            answers.append(guess_num)
+    
+    if guess_num != rand_num:  
         print('\n******* You Lost ********')
         print(f'The number was: {rand_num}')
         print(f'Your answers were: {answers}')
